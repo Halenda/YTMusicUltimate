@@ -94,7 +94,7 @@ jobs:
         run: pipx install --force https://github.com/asdfzxcvbn/pyzule-rw/archive/main.zip
 
       - name: Download YouTube Music
-        run: wget "${{ inputs.ipa_url }}" --no-verbose -O ytm.ipa
+        run: wget --user-agent="Mozilla" "${{ inputs.ipa_url }}" --no-verbose -O ytm.ipa
 
       - name: Build Tweak for Sideloading
         run: |
